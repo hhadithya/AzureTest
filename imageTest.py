@@ -1,5 +1,6 @@
 from PIL import Image
 import math
+import random as rand
 
 r_sum = 0
 g_sum = 0
@@ -21,10 +22,12 @@ def changePixels(x, y, image):
     for i in range(x):
         for j in range(y):
             r, g, b = image.getpixel((i, j))
-            image.putpixel((i, j), (math.ceil((r + r_mean)/2), math.ceil((g + r_mean)/2), math.ceil((b + r_mean)/2)))
+            # add random value to change some more
+            randomVal = rand.randint(0, 255)
+            image.putpixel((i, j), (math.ceil((r + r_mean + randomVal)/3), math.ceil((g + r_mean + randomVal)/3), math.ceil((b + r_mean + randomVal)/3)))
 
 try:
-    img = Image.open("src/apples.jpg")
+    img = Image.open("src/banana.jpg")
     img.show();
     # print(img.histogram());
     width, height = img.size
