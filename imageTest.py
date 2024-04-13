@@ -27,7 +27,7 @@ def changePixels(x, y, image):
             image.putpixel((i, j), (math.ceil((r + r_mean + randomVal)/3), math.ceil((g + r_mean + randomVal)/3), math.ceil((b + r_mean + randomVal)/3)))
 
 try:
-    img = Image.open("src/banana.jpg")
+    img = Image.open("src/banana-grayscale.png")
     img.show();
     # print(img.histogram());
     width, height = img.size
