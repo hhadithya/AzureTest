@@ -14,6 +14,6 @@ I changed the pixel values as per my preference. The output appeared as a dissol
 ![Dissolve Mode Image](src/dissolveMode(like).png)
 
 -firstly I took mean values for r, g, b values of the pixels.
--then changed the values using this equation (r_exact + r_mean _randomVal)/3, here random value in ramnge of 0 to 255.
+-then changed the values using this equation (r_exact + r_mean _randomVal)/3, here random value in range of 0 to 255.
 - for example, if r_exact = 10, r_mean = 100, randomVal = 50, then new value = (10 + 100 + 50)/3 = 53.33
 - And used math.ceil() to get the upper nearest integer value.
